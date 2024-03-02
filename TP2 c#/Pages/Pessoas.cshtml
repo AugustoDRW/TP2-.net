@@ -1,0 +1,37 @@
+﻿@page "/"
+@model TP2_c_.Pages.PessoasModel
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model.PessoaList)
+            {
+                <tr>
+                    <td>@p.Nome</td>
+                    <td>                        @p.Idade            </td>
+                    <td>
+                        @p.CPF
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+
+
+    </table>
+
+
+
